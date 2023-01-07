@@ -17,7 +17,7 @@
                   [else (iter (append res (list (get-val s row col))) (add1 row))]))]
     (iter '() 1)))
 
-;; Returns the corresponding val
+;; Returns the corresponding value
 (define (get-val s row col)
   (local [(define (iter row col)
             (cond [(= col 1) (first row)]
