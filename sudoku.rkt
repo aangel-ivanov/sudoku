@@ -43,7 +43,6 @@
                             [else (iter (rest s) (sub1 row) col)]))]
               (iter s start-row start-col)))
 
-
 ;; Displays the sudoku s in the interactions window
 (define (display-sudoku s)
   (local [(define (iter s row col)
@@ -133,7 +132,6 @@
                          [else (iter (place s row col 0) row (sub1 col) #t)])]))]
 
     (iter (first puzzle) 1 1 #f)))
-    
 
 ;; Attaches the list of boolean values to the sudoku,
 ;;   where true corresponds to a given value and false not given
@@ -146,7 +144,6 @@
                   [else (iter (place s-bools row col #t) row (add1 col))]))]
 
     (iter s 1 1)))
-
 
 ;; Example sudokus listed below
 
@@ -173,18 +170,6 @@
     (0 0 9 3 0 0 0 7 4) 
     (0 4 0 0 5 0 0 3 6) 
     (7 0 3 0 1 8 0 0 0))))
-
-(define ex3
-  (make-sudoku-obj
-   '((0 0 0 6 0 0 4 0 0) 
-    (7 0 0 0 0 3 6 0 0) 
-    (0 0 0 0 9 1 0 8 0) 
-    (0 0 0 0 0 0 0 0 0) 
-    (0 5 0 1 8 0 0 0 3) 
-    (0 0 0 3 0 6 0 4 5) 
-    (0 4 0 2 0 0 0 6 0) 
-    (9 0 3 0 0 0 0 0 0) 
-    (0 2 0 0 0 0 1 0 0))))
 
 
   
